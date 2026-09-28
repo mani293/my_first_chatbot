@@ -68,6 +68,6 @@ if file is not None:
         | llm
         | strOutputParser
     )
-
-    response = chain.invoke(user_question)
-    st.write(response)
+    if user_question:
+        response = chain.invoke(user_question)
+        st.write(response)
